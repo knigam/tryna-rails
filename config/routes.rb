@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   resources :activities do
       resources :messages
+      resources :invites
   end
   get 'welcome/index'
 
