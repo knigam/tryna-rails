@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :friendships do
+      member do
+          post 'friend_request'
+          put 'friend_request_accept'
+          delete 'friend_request_reject'
+      end
+  end
   resources :activities do
       resources :messages
   end
